@@ -1,0 +1,90 @@
+/*------------ Portfolio Section ---------------*/
+.portfolio{
+    text-align: center;
+    background: $light-gray;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    &__title{
+        @include sans-serif($fs: 5rem);
+        color: $lime;
+    }
+    &__items{
+        @include container($width: 135rem);
+        .items--list{
+            position: relative;
+            overflow: hidden;
+            .portfolio__item--img{
+                display: block;
+                width: 100%;
+            }
+            figcaption{
+                position: absolute;
+                top: 100%;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                padding: 3rem;
+                background: rgba($accent, 0.4);
+                color: $white;
+                text-align: left;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                transition: top ease-in-out 250ms;
+            }
+            &:hover figcaption,
+            &:focus figcaption{
+                top: 0;
+            }
+        }
+    }
+}
+
+.portfolio__item--title{
+    color: $white;
+    font-size: 3.125rem;
+    margin-bottom: auto;
+
+}
+.portfolio__item--text{
+    display: none;
+    
+}
+.portfolio__item--link{
+    @include text-dec;
+    color: $white;
+    font-weight: $fw-b;
+    font-size: 1.7rem;
+    border-bottom: 0.3rem solid $white;
+    align-self: flex-start;
+    &::after{
+        content: url(../img/arrow-white.svg);
+        display: inline-block;
+        height: 1.8rem;
+        width: 1.8rem;
+        margin-left: 0.8rem;
+    }
+}
+
+@supports (display: grid) {
+    .portfolio__items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include computer_lg($min-screen : 730px){
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .featured{
+                grid-column: 1 / span 2;
+                grid-row: 1 / span 2;
+
+            .portfolio__item--title{
+                font-size: 4.125rem;
+            }
+            .portfolio__item--text{
+                display: block;
+            }
+        }
+        
+    }
+    
+}

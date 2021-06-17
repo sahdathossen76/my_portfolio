@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo webside</title>
+    <!-- font-awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- Style Css -->
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <!--Navbar Menu-->
+    <nav class="navbar">
+        <a href="#" class="navbar__logo">SCSS</a>
+        <div class="navbar__bars">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="navbar__menu">
+            <a href="#" class="navbar__menu--links">Home</a>
+            <a href="#" class="navbar__menu--links">Product</a>
+            <a href="#" class="navbar__menu--links">About</a>
+            <a href="#" class="navbar__menu--links">Contact</a>
+            <a href="#" class="navbar__menu--links" id="button">Sign Up</a>
+        </div>
+    </nav>
+    <!--Hero Section Start-->
+    <section class="hero">
+        <h1 class="hero__title">welcome to my<span>portfolio</span> </h1>
+    </section>
+    <!--Intro Section-->
+    <section class="intro">
+        <div class="intro__left">
+                
+            <!-- here is a image
+                
+                <img class="intro__left--img" src="img/welcome-01.png" alt="computer image 1">
+                
+            -->
+        </div>
+        <div class="intro__center">
+            <div class="intro__center--text">
+                <h2>MAKING IT HAPPEN</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet eleifend justo.
+                 Quisque non magna vel justo eleifend imperdiet</p>
+            </div>
+        </div>
+        <div class="intro__right">
+                
+            <!-- here is a image 
+                
+            <img class="intro__right--img" src="img/welcome-02.png" alt="computer image 2">
+                
+            -->
+        </div>
+    </section>
+    <!--About Section-->
+    <section class="about">
+        <img class="about__img" src="img/joe-portfolio.png" alt="a picture of shuvo">
+        <h1 class="about__title">Shuvo Portfolio</h1>
+        <h2 class="about__subtitle">DESIGNER & DEVELOPER</h2>
+        <div class="about__text">
+            <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. 
+                Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+        <p>Aenean mattis tristique elementum. Duis massa tellus, tempus non fermentum at, venenatis et augue. Phasellus tristique purus sed sagittis interdum. Duis luctus sapien justo, vel viverra ex convallis et. Maecenas suscipit lacus ut lectus mattis ornare. 
+                Vestibulum faucibus purus sit amet erat lobortis, tristique fringilla leo sodales. Interdum et malesuada fames ac ante.</p>
+        </div>
+    </section>
+    <!--portfolio Section-->
+    <section class="portfolio">
+        <h1 class="portfolio__title">My Work</h1>
+        <div class="portfolio__items">
+            <!-- portfolio item 01 -->
+            <figure class="items--list featured">
+            <!-- <figure class="portfolio__items--list"> -->
+                <img class="portfolio__item--img" src="img/portfolio-01.jpg" alt="webside-1">
+                <figcaption>
+                    <h2 class="portfolio__item--title">PROJECT NAME</h2>
+                    <p class="portfolio__item--text">A short description could go right here</p>
+                    <a href="###" class="portfolio__item--link">More Info</a>
+                </figcaption>
+            </figure>
+            <!-- portfolio item 02 -->
+            <figure class="items--list">
+            <!-- <figure class="portfolio__item--list"> -->
+                <img class="portfolio__item--img" src="img/portfolio-02.jpg" alt="webside-1">
+                <figcaption>
+                    <h2 class="portfolio__item--title">PROJECT NAME</h2>
+                    <p class="portfolio__item--text">A short description could go right here</p>
+                    <a href="###" class="portfolio__item--link">More Info</a>
+                </figcaption>
+            </figure>
+            <!-- portfolio item 03 -->
+            <figure class="items--list">
+            <!-- <figure class="portfolio__item--list"> -->
+                <img class="portfolio__item--img" src="img/portfolio-03.jpg" alt="webside-1">
+                <figcaption>
+                    <h2 class="portfolio__item--title">PROJECT NAME</h2>
+                    <p class="portfolio__item--text">A short description could go right here</p>
+                    <a href="###" class="portfolio__item--link">More Info</a>
+                </figcaption>
+            </figure>
+            <!-- portfolio item 04 -->
+            <figure class="items--list">
+            <!-- <figure class="portfolio__item--list"> -->
+                <img class="portfolio__item--img" src="img/portfolio-04.jpg" alt="webside-1">
+                <figcaption>
+                    <h2 class="portfolio__item--title">PROJECT NAME</h2>
+                    <p class="portfolio__item--text">A short description could go right here</p>
+                    <a href="###" class="portfolio__item--link">More Info</a>
+                </figcaption>
+            </figure>
+            <!-- portfolio item 05 -->
+            <figure class="items--list">
+            <!-- <figure class="portfolio__item--list"> -->
+                <img class="portfolio__item--img" src="img/portfolio-05.jpg" alt="webside-1">
+                <figcaption>
+                    <h2 class="portfolio__item--title">PROJECT NAME</h2>
+                    <p class="portfolio__item--text">A short description could go right here</p>
+                    <a href="###" class="portfolio__item--link">More Info</a>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+    <!--contact Section-->
+    <section class="contact">
+        <h1 class="contact__title"> Contact me</h1>
+        <form action="">
+            <label for="name" class="name">Name:
+               <input type="text" id="name">
+            </label>
+            <label for="email" class="email">Email:
+                <input type="email" id="email">
+            </label>
+            <label for="message" class="message">Message:
+                <textarea name="" type="text" id="message"></textarea>
+            </label>
+            <a href="###" class="submit__btn" id="button">SENT</a>
+        </form>
+    </section>
+    <!--footer Section-->
+    <footer class="footer">
+        <p class="footer__title">
+            Follow me on social media
+        </p>
+        <div class="footer__social--icons">
+            <img src="img/twitter.svg" alt="">
+            <img src="img/instagram.svg" alt="">
+            <img src="img/github.svg" alt="">
+        </div>
+        <p class="footer__copyright">@ Copyright 2021 shuvo Portfolio</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/*------------ About Me Section ---------------*/
+.about{
+  @include container($width: 80rem);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  &__title{
+    @include sans-serif($fs: 5rem);
+    color: $lime;
+    margin-bottom: .25rem;
+    letter-spacing: 5px;
+      
+  }
+  &__subtitle{
+    margin: .7rem 0;
+}
+}
+@supports (display: grid) {
+  .about{
+    display: grid;
+    grid-template-columns: [port-start] minmax(3rem, 1fr) [name-start] minmax(3rem, 1fr) [img-end] 2fr [port-end];
+    grid-column-gap: 0.5rem;
+    &__img {
+      grid-column: port / img;
+      grid-row: 1 / 2;
+
+      @include tablet($max-screen : 1920px, $min-screen : 800px){
+        grid-row: 1 / 4;
+      }
+    }
+    &__title {
+      grid-column: name / port;
+      grid-row: 1 / 2;
+      align-self: end;
+      @include tablet($max-screen : 1920px, $min-screen : 800px){
+        align-self: start;
+      }
+    }
+    &__subtitle,
+    &__text {
+      grid-column: port / port;
+      @include tablet($max-screen : 1920px, $min-screen : 800px){
+        grid-column: img-end / port-end;
+      }
+    }
+    &__subtitle {
+      grid-row: 2 / 3;
+    }
+
+    &__text {
+      grid-row: 3 / 4;
+    }
+  } 
+}

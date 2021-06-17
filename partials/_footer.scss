@@ -1,0 +1,37 @@
+/*------------Footer Start-------------*/
+.footer{
+    padding: 5rem 2.5rem;
+    background: $dark-blue;
+    overflow: hidden;
+    &__title{
+        text-align: center;
+        color: $white;
+    }
+    &__social--icons{
+        width: 90%;
+        max-width: 24rem;
+        display: flex;
+        justify-content: space-between;
+        margin: 1.5rem auto;
+        padding-top: 1.5rem;
+        
+        img{
+            width: 25%;
+            height: 25%;
+
+        }
+    }
+    &__copyright{
+        color: $white;
+        text-align: center;
+        &::before{
+            content: '';
+            display: block;
+            background: rgba($white , 0.15);
+            height: 1px;
+            max-width: 25%;
+            margin: 6.4rem auto;
+
+        }
+    }
+}

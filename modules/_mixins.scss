@@ -1,0 +1,12 @@
+
+@mixin text-dec ($txt-dec: none, $cur: pointer,){
+  text-decoration: $txt-dec;
+  cursor: $cur;
+}
+@mixin clearfix {
+    &::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }

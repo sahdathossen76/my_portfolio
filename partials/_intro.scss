@@ -1,0 +1,66 @@
+/*------------ Intro Section ---------------*/
+.intro{
+    @include container-fluid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: $white;
+    clear: both;
+    height: 40vh;
+
+    @include computer_sm {
+        height: 33vh;
+    }
+    @include mobile {
+        height: 35vh;
+    }
+    .intro__left{
+        width: 80%;
+        background-image: url(../img/welcome-01.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    .intro__center{
+        background: $dark-blue;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        min-width: 35%;
+        .intro__center--text{
+            text-align: center;
+            padding: 1rem 5vw;
+        }
+    }
+    .intro__right{
+        width: 80%;
+        background-image: url(../img/welcome-02.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+/*
+.intro{
+    .container-fluid{
+        display: flex;
+        color: $white;
+    }
+        
+        &__center{
+            background: $dark-blue;
+            padding: 2.5em 5vw;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__left img, &__right img{
+            object-fit: cover;
+            min-height: 100%;
+            min-width: 100%;
+        }
+}*/

@@ -1,0 +1,68 @@
+/*---------------Main Css Start---------------*/
+.navbar{
+    @include container ($pd-right: var(--bs-gutter-x, 2.7rem), $pd-left: var(--bs-gutter-x, 2.7rem));
+    background: rgba($gray, 0.2);
+    height: 8rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    justify-self: center;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+
+    &__logo{
+        color: $dark;
+        @include text-dec;
+        font-size: 2.2rem;
+    }
+    &__bars{
+        opacity: 0;
+        @include tablet($max-screen : 580px, $min-screen : 100px) {
+            color: $dark;
+            opacity: 1;
+            position: absolute;
+            top: 2.2rem;
+            right: 2.0rem;
+            font-size: 2rem;
+
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        justify-self: center;
+        align-items: center;
+        @include tablet($max-screen : 580px, $min-screen : 100px){
+            display: none;
+        }
+        &--links{
+            color: $dark;
+            font-size: 2rem;
+            @include text-dec;
+            padding: 0 1rem;
+            &:hover{
+                color: $lime;
+                transition: all 0.3s ease;
+            }
+        }
+        #button{
+            padding: 1rem 2.4rem;
+            border: none;
+            outline: none;
+            border-radius: 0.4rem;
+            background: $orangered;
+            margin-left: 1.6rem;
+            color: $light;
+            &:hover{
+                background: $lime;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
